@@ -12,16 +12,16 @@ const PRODUCTS_CONFIG = {
   panelProducts: [
     {
       id: "panel_ff_aim_ultra",
-      title: "100% Headshot & Location",
-      badge: "ONLY RED",
-      image: "https://i.postimg.cc/3R57DgH7/1.jpg",
-      video: "https://drive.google.com/file/d/1MMN7KevBdcaHuF9cPyqQSBWCO6bC-kpT/view?usp=sharing",
-      description: "Custom touch sensitivity booster and drag-shot calibration tool. Works smoothly on all Android phones without lag or heat.",
+      title: "GOLDEN HIPHOP AND HIPHOP",
+      badge: "AURA",
+      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      video: "https://drive.google.com/file/d/1P3hPIpCOijTiDvJFpe9in_hK_jLYRO--/view?usp=sharing",
+      description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
-        "100% Headshot & Location",
-        "Body Head",
+        "GOLDEN HIPHOP & HIPHOP",
+        "Play directelly",
         "MOST Dangerous",
-        "ONLY for GuestID"
+        "Supports all Matches"
       ],
       price: 60,
       originalPrice: 100,

@@ -15,7 +15,7 @@ const PRODUCTS_CONFIG = {
       title: "ANAHouse VIP Headshot & Sensitivity Panel",
       badge: "PRO TESTED",
       image: "https://i.postimg.cc/sDDLQ9VC/icon-512.png",
-      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      video: "https://drive.google.com/file/d/1QOPeihPIY898YsMvugYuapzGIK8xJ7Sy/view?usp=sharing",
       description: "Custom touch sensitivity booster and drag-shot calibration tool. Works smoothly on all Android phones without lag or heat.",
       features: [
         "Dynamic Touch Sensitivity 4.0",
@@ -54,56 +54,56 @@ const PRODUCTS_CONFIG = {
   // ============================================================================
   topUpBoxes: [
     {
-      id: "topup_10_50",
+      id: "topup_10_49",
       boxNumber: 1,
       name: "BOX 1",
-      range: "₹10 – ₹50",
+      range: "₹10 – ₹49",
       extraCharge: 10,
       popular: false,
       tag: "AIRDROP PACK"
     },
     {
-      id: "topup_51_150",
+      id: "topup_51_149",
       boxNumber: 2,
       name: "BOX 2",
-      range: "₹51 – ₹150",
+      range: "₹51 – ₹149",
       extraCharge: 20,
       popular: true, // Specifically highlighted (₹80 code = ₹100)
       tag: "POPULAR (₹80 TOP-UP)"
     },
     {
-      id: "topup_151_250",
+      id: "topup_150_249",
       boxNumber: 3,
       name: "BOX 3",
-      range: "₹151 – ₹250",
+      range: "₹150 – ₹249",
       extraCharge: 25,
       popular: false,
       tag: "EVENT PACK"
     },
     {
-      id: "topup_251_400",
+      id: "topup_250_399",
       boxNumber: 4,
       name: "BOX 4",
-      range: "₹251 – ₹400",
+      range: "₹250 – ₹399",
       extraCharge: 35,
       popular: false,
       tag: "DIAMOND PACK"
     },
     {
-      id: "topup_401_500",
+      id: "topup_399_499",
       boxNumber: 5,
       name: "BOX 5",
-      range: "₹401 – ₹500",
+      range: "₹399 – ₹499",
       extraCharge: 40,
       popular: false,
       tag: "BOOYAH PASS"
     },
     {
-      id: "topup_501_600",
+      id: "topup_500_600",
       boxNumber: 6,
       name: "BOX 6",
-      range: "₹501 – ₹600",
-      extraCharge: 45,
+      range: "₹500 – ₹600",
+      extraCharge: 60,
       popular: false,
       tag: "MEGA PACK"
     },
@@ -112,7 +112,7 @@ const PRODUCTS_CONFIG = {
       boxNumber: 7,
       name: "BOX 7",
       range: "₹601 – ₹700",
-      extraCharge: 50,
+      extraCharge: 70,
       popular: false,
       tag: "MONTHLY PACK"
     },
@@ -121,7 +121,7 @@ const PRODUCTS_CONFIG = {
       boxNumber: 8,
       name: "BOX 8",
       range: "₹701 – ₹800",
-      extraCharge: 60,
+      extraCharge: 80,
       popular: true,
       tag: "SUPER 1060 PACK"
     }

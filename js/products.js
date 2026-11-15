@@ -258,6 +258,66 @@ const PRODUCTS_CONFIG = {
   // Local deals - Customer contacts seller directly
   // ============================================================================
   gamingIdProducts: [
+     {
+      id: "acc_ff_001",
+      title: "Free Fire ID • Level 74 | Cobra MP40 Max | Clean Gmail",
+      badge: "TOP ACCOUNT",
+      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=700&q=80",
+      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      price: 2499,
+      originalPrice: 3500,
+      status: "AVAILABLE",
+      available: true,
+      stats: {
+        level: "Level 74",
+        rank: "Heroic",
+        evoGuns: "Cobra MP40 (Max)",
+        bundles: "Hip Hop Bundle",
+        bindType: "Clean Google (100% Safe)"
+      },
+      description: "Personal verified Free Fire account. Clean Google login with zero third-party binds. Talk with me on WhatsApp for this deal."
+    },
+    {
+      id: "acc_ff_002",
+      title: "Free Fire ID • Level 68 | 8 Evo Guns | Bunny Warrior",
+      badge: "BUDGET DEAL",
+      image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=700&q=80",
+      video: "",
+      price: 1399,
+      originalPrice: 2000,
+      status: "AVAILABLE",
+      available: true,
+      stats: {
+        level: "Level 68",
+        rank: "Heroic 2 Stars",
+        evoGuns: "8 Evo Weapons",
+        bundles: "Bunny Warrior",
+        bindType: "Facebook (Password & 2FA Change)"
+      },
+      description: "Playable account with rare emote animations and multiple Evo weapons. Handover verified directly with me."
+    },
+    {
+      id: "acc_ff_003",
+      title: "Free Fire ID • Level 80 | Full Elite Pass [SOLD]",
+      badge: "VERIFIED SOLD",
+      image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=700&q=80",
+      video: "",
+      price: 3499,
+      originalPrice: 5000,
+      status: "SOLD",
+      available: false,
+      stats: {
+        level: "Level 80",
+        rank: "Master",
+        evoGuns: "12 Evo Guns",
+        bundles: "Sakura S1, Green Criminal",
+        bindType: "Delivered to Local Buyer"
+      },
+      description: "Account safely delivered to buyer. Listed as verified local proof."
+    }
+  ]
+};
+
    
 if (typeof window !== "undefined") {
   window.PRODUCTS_CONFIG = PRODUCTS_CONFIG;

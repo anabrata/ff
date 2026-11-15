@@ -7,7 +7,7 @@
 
 const PRODUCTS_CONFIG = {
   // ============================================================================
-  // 1. FREE FIRE PANEL SECTION (Exactly 2 Verified Panels - Examples Removed)
+  // 1. FREE FIRE PANEL SECTION
   // ============================================================================
   panelProducts: [
     {
@@ -21,16 +21,16 @@ const PRODUCTS_CONFIG = {
         "100% Headshot & Location",
         "Body Head",
         "MOST Dangerous",
-        "ONLY for GuestID",
+        "ONLY for GuestID"
       ],
-      price:60,
+      price: 60,
       originalPrice: 100,
       duration: "RED",
       available: true
     },
     {
-      id: "panel_ff_fps_smooth",
-      title: "Loction (90%)",
+      id: "panel_ff_location_90",
+      title: "Location (90%)",
       badge: "HACKER..",
       image: "https://i.postimg.cc/Y967Nhpp/2.jpg",
       video: "https://drive.google.com/file/d/18VHr1T5lxQwlNIrElzVBS7duzPM7n_v8/view?usp=sharing",
@@ -47,7 +47,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
     {
-      id: "panel_ff_fps_smooth",
+      id: "panel_ff_location_simple",
       title: "Location",
       badge: "SIMPLE",
       image: "https://i.postimg.cc/zBCNwVJ5/3.jpg",
@@ -59,7 +59,7 @@ const PRODUCTS_CONFIG = {
         "RAM Buffer Clean for Low-End Phones",
         "Simple One-Click Activation"
       ],
-      price:40,
+      price: 40,
       originalPrice: 80,
       duration: "SAFE",
       available: true
@@ -254,11 +254,11 @@ const PRODUCTS_CONFIG = {
   ],
 
   // ============================================================================
-  // 4. FREE FIRE ID SELLING SECTION (NO BUY BUTTON - DISPLAY ONLY)
-  // Local deals - Customer contacts seller directly
+  // 4. FREE FIRE ID SELLING SECTION (SAFELY EMPTIED - PREVENTS JS CRASHES)
   // ============================================================================
-  gamingIdProducts: [ 
-    
+  gamingIdProducts: []
+};
+
 if (typeof window !== "undefined") {
   window.PRODUCTS_CONFIG = PRODUCTS_CONFIG;
 }

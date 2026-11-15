@@ -258,7 +258,8 @@ const PRODUCTS_CONFIG = {
   // Local deals - Customer contacts seller directly
   // ============================================================================
   gamingIdProducts: [
-     {
+     
+    {
       id: "acc_ff_001",
       title: "Free Fire ID • Level 74 | Cobra MP40 Max | Clean Gmail",
       badge: "TOP ACCOUNT",
@@ -316,9 +317,7 @@ const PRODUCTS_CONFIG = {
       description: "Account safely delivered to buyer. Listed as verified local proof."
     }
   ]
-};
-
-   
+};   
 if (typeof window !== "undefined") {
   window.PRODUCTS_CONFIG = PRODUCTS_CONFIG;
 }

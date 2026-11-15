@@ -23,7 +23,7 @@ const PRODUCTS_CONFIG = {
         "MOST Dangerous",
         "Supports all Matches"
       ],
-      price: 60,
+      price: 80,
       originalPrice: 100,
       duration: "RED",
       available: true

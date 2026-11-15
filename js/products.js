@@ -29,6 +29,24 @@ const PRODUCTS_CONFIG = {
       available: true
     },
     {
+      id: "panel_ff_aim_ultra",
+      title: "SAKURA RED ARTICS BUNNY",
+      badge: "AURA",
+      image: "https://i.postimg.cc/zBJVG5d8/Screenshot-2026-11-16-00-57-41-12-c28519d624689b8d548e2809af584b0c.jpg",
+      video: "https://drive.google.com/file/d/13yj56ptfiklbr_FDsk5sOjgHeGl7erDk/view?usp=sharing",
+      description: "[Play without any lag or id ban issue(in OB 55).",
+      features: [
+        "SAKURA RED ARTICS BUNNY",
+        "Play directelly",
+        "MOST Dangerous",
+        "Supports all Matches"
+      ],
+      price: 80,
+      originalPrice: 100,
+      duration: "RED",
+      available: true
+    },
+    {
       id: "panel_ff_location_90",
       title: "Location (90%)",
       badge: "HACKER..",

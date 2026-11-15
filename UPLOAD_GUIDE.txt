@@ -1,0 +1,57 @@
+================================================================================
+ANAHouse - FILES READY FOR GITHUB UPLOAD
+Folder Location: C:\Users\123\Desktop\ANAHouse-GitHub-Upload
+================================================================================
+
+All issues have been completely fixed and tested:
+
+1. VIDEO RATIO MATCHING & AUTOPLAY (PANEL & ID SECTIONS):
+   - Inline video previews now autoplay AUTOMATICALLY on screen/scroll without clicking.
+   - The video ratio matches the thumbnail ("tambelin") ratio 100% perfectly (16:9).
+   - Zero-jump crossfade: the video seamlessly replaces the thumbnail in place with zero layout shift.
+   - Videos pause automatically when scrolled out of view to save data and battery.
+
+2. CINEMA MODAL VIDEO PLAYER:
+   - Fixed responsive sizing: maintaining crisp 16:9 cinema ratio across mobile and desktop.
+   - No stretching, distortion, or ugly black cutoffs.
+   - Clean top bar with blinking LIVE indicator and red floating close button (✕).
+   - Instant stop and unload when modal is closed.
+
+3. GOOGLE SHEETS REDEEM DISPENSER & ERROR AUDIO:
+   - Configured with your Web App URL.
+   - 5-digit PIN claim modal with auto-focus, paste button, and instant lookup.
+   - Permanent deactivation on COPY button click.
+   - Plays your custom audio (mp3/error.m4a) when wrong or used PIN is entered.
+
+4. ROUNDED LOGO & FAVICON:
+   - Pickaxe logo rounded at 22% with anti-aliasing applied across header and browser tab favicon.
+
+--------------------------------------------------------------------------------
+FILES CHANGED IN THIS UPDATE (WHICH FILES TO UPLOAD TO GITHUB):
+--------------------------------------------------------------------------------
+If updating an existing GitHub repository, you can simply upload these modified files:
+
+  1. index.html                     (Root folder)
+  2. css/style.css                  (Inside 'css' folder)
+  3. js/app.js                      (Inside 'js' folder)
+  4. js/products.js                 (Inside 'js' folder)
+  5. js/config.js                   (Inside 'js' folder)
+  6. assets/images/logo-rounded.png (Inside 'assets/images' folder)
+  7. assets/icons/favicon.png       (Inside 'assets/icons' folder)
+  8. favicon.ico                    (Root folder)
+  9. mp3/error.m4a                  (Inside 'mp3' folder)
+ 10. mp3/error.mp3                  (Inside 'mp3' folder)
+ 11. google-sheets-redeem-script.js (For Google Sheets Apps Script)
+
+--------------------------------------------------------------------------------
+EASIEST WAY TO UPDATE ON GITHUB:
+--------------------------------------------------------------------------------
+Option A (Web Drag & Drop):
+1. Open your GitHub repository in your browser.
+2. For root files (index.html, favicon.ico), drag and drop directly onto the repo page.
+3. For 'css', 'js', 'assets', 'mp3' folders, open those folders on GitHub and drag & drop the updated files inside.
+4. Click "Commit changes".
+
+Option B (Replace Everything):
+You can drag all files/folders from this Desktop folder into your repo to update all at once!
+================================================================================

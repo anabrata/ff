@@ -168,6 +168,7 @@
       }
 
       window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(checkAndPlayVisibleVideos, 150);
     }
 
     desktopButtons.forEach((btn) => {
@@ -222,11 +223,11 @@
 
     if (cleanUrl.includes("drive.google.com") || cleanUrl.includes("youtube.com")) {
       container.innerHTML = `
-        <iframe src="${cleanUrl}" width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen style="position: absolute; inset: 0; width: 100%; height: 100%;"></iframe>
+        <iframe src="${cleanUrl}" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
       `;
     } else {
       container.innerHTML = `
-        <video src="${cleanUrl}" controls autoplay playsinline controlsList="nodownload" style="width: 100%; height: 100%; object-fit: contain; background: #000;"></video>
+        <video src="${cleanUrl}" controls autoplay playsinline controlsList="nodownload"></video>
       `;
     }
 
@@ -258,6 +259,7 @@
         .join("");
 
       const hasVideo = !!product.video;
+      const isDirectStream = hasVideo && !product.video.includes("drive.google.com") && !product.video.includes("youtube.com") && !product.video.includes("youtu.be");
 
       const waBuyMsg = encodeURIComponent(`Hello ANAHouse, I want to buy the Free Fire VIP Panel: ${product.title} (Price: ${PricingEngine.format(product.price)}).`);
 
@@ -267,12 +269,7 @@
         <div class="card-media-wrapper" data-product-id="${product.id}" tabindex="0">
           <img src="${escapeHtml(product.image)}" alt="${escapeHtml(product.title)}" class="card-img-preview" loading="lazy">
           
-          ${hasVideo ? `<video class="card-video-preview" src="${escapeHtml(product.video)}" muted loop playsinline preload="none"></video>` : ""}
-          
-          <div class="hold-progress-overlay">
-            <div class="hold-spinner"></div>
-            <div class="hold-hint-text">PLAYING PREVIEW</div>
-          </div>
+          ${isDirectStream ? `<video class="card-video-preview" src="${escapeHtml(product.video)}" muted loop playsinline webkit-playsinline preload="auto"></video>` : ""}
 
           ${hasVideo ? `
             <button class="btn-watch-demo" type="button" title="Click to watch full video">
@@ -327,66 +324,142 @@
         }
       });
     });
-
-    setupPanelInteractions();
   }
 
-  function setupPanelInteractions() {
-    const wrappers = document.querySelectorAll("#panel-cards-grid .card-media-wrapper");
-    const holdDelay = CONFIG.theme.videoHoldDelayMs || 450;
+  /* ============================================================================
+     AUTOMATIC INLINE VIDEO AUTOPLAY ON SCROLL / VIEWPORT (PANEL & ID SECTIONS)
+     Videos play automatically when visible on screen without clicking or pressing
+     Matches exact thumbnail aspect ratio seamlessly with zero jumps or gaps
+     ============================================================================ */
+  let autoplayObserver = null;
 
+  function checkAndPlayVisibleVideos() {
+    const wrappers = document.querySelectorAll(".card-media-wrapper");
     wrappers.forEach((wrapper) => {
       const video = wrapper.querySelector(".card-video-preview");
       if (!video) return;
 
-      let holdTimeout = null;
-      let isPlaying = false;
+      // Check if wrapper is in an active section
+      const section = wrapper.closest(".section-view");
+      const isSectionActive = !section || section.classList.contains("active-section");
 
-      function startHold() {
-        wrapper.classList.add("holding");
-        holdTimeout = setTimeout(() => {
-          isPlaying = true;
-          wrapper.classList.remove("holding");
-          wrapper.classList.add("video-active");
-          video.currentTime = 0;
-          video.play().catch(() => {});
-        }, holdDelay);
+      if (!isSectionActive) {
+        if (!video.paused) video.pause();
+        wrapper.classList.remove("video-playing");
+        return;
       }
 
-      function stopHold() {
-        clearTimeout(holdTimeout);
-        wrapper.classList.remove("holding");
-        if (isPlaying) {
-          isPlaying = false;
-          wrapper.classList.remove("video-active");
-          video.pause();
-          video.currentTime = 0;
+      const rect = wrapper.getBoundingClientRect();
+      const inViewport = (
+        rect.top < window.innerHeight &&
+        rect.bottom > 0 &&
+        wrapper.offsetParent !== null
+      );
+
+      if (inViewport) {
+        video.muted = true;
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              wrapper.classList.add("video-playing");
+            })
+            .catch(() => {
+              // Browser autoplay policy might need first interaction
+            });
         }
-      }
-
-      wrapper.addEventListener("pointerdown", startHold);
-      wrapper.addEventListener("pointerup", stopHold);
-      wrapper.addEventListener("pointerleave", stopHold);
-      wrapper.addEventListener("pointercancel", stopHold);
-
-      wrapper.addEventListener("mouseenter", (e) => {
-        if (e.pointerType === "mouse") startHold();
-      });
-      wrapper.addEventListener("mouseleave", stopHold);
-
-      const demoBtn = wrapper.querySelector(".btn-watch-demo");
-      if (demoBtn) {
-        demoBtn.addEventListener("click", (e) => {
-          e.stopPropagation();
-          stopHold();
-          const prodId = wrapper.getAttribute("data-product-id");
-          const prod = PRODUCTS_CONFIG.panelProducts.find((p) => p.id === prodId);
-          if (prod && prod.video) {
-            openVideoModal(prod.video, prod.title);
-          }
-        });
+      } else {
+        if (!video.paused) video.pause();
+        wrapper.classList.remove("video-playing");
       }
     });
+  }
+
+  function setupAutoplayVideos() {
+    const wrappers = document.querySelectorAll(".card-media-wrapper");
+    if (!wrappers.length) return;
+
+    wrappers.forEach((wrapper) => {
+      if (wrapper._videoSetupDone) return;
+      wrapper._videoSetupDone = true;
+
+      const video = wrapper.querySelector(".card-video-preview");
+      if (video) {
+        video.muted = true;
+        video.playsInline = true;
+        video.loop = true;
+
+        video.addEventListener("playing", () => {
+          wrapper.classList.add("video-playing");
+        });
+        video.addEventListener("pause", () => {
+          wrapper.classList.remove("video-playing");
+        });
+        video.addEventListener("ended", () => {
+          wrapper.classList.remove("video-playing");
+        });
+      }
+
+      // Clicking the demo button or thumbnail area triggers cinema modal
+      wrapper.addEventListener("click", () => {
+        const prodId = wrapper.getAttribute("data-product-id");
+        const accId = wrapper.getAttribute("data-account-id");
+        let target = null;
+        if (prodId) {
+          target = PRODUCTS_CONFIG.panelProducts.find((p) => p.id === prodId);
+        } else if (accId) {
+          target = PRODUCTS_CONFIG.gamingIdProducts.find((a) => a.id === accId);
+        }
+        if (target && target.video) {
+          openVideoModal(target.video, target.title);
+        }
+      });
+    });
+
+    if ("IntersectionObserver" in window && !autoplayObserver) {
+      autoplayObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const wrapper = entry.target;
+            const video = wrapper.querySelector(".card-video-preview");
+            if (!video) return;
+
+            const section = wrapper.closest(".section-view");
+            const isSectionActive = !section || section.classList.contains("active-section");
+
+            if (entry.isIntersecting && isSectionActive && entry.intersectionRatio >= 0.15) {
+              video.muted = true;
+              const p = video.play();
+              if (p !== undefined) {
+                p.then(() => {
+                  wrapper.classList.add("video-playing");
+                }).catch(() => {});
+              }
+            } else {
+              if (!video.paused) video.pause();
+              wrapper.classList.remove("video-playing");
+            }
+          });
+        },
+        { threshold: [0.15, 0.35, 0.6] }
+      );
+    }
+
+    if (autoplayObserver) {
+      wrappers.forEach((w) => {
+        if (w.querySelector(".card-video-preview")) {
+          autoplayObserver.observe(w);
+        }
+      });
+    }
+
+    window.removeEventListener("scroll", checkAndPlayVisibleVideos);
+    window.removeEventListener("resize", checkAndPlayVisibleVideos);
+    window.addEventListener("scroll", checkAndPlayVisibleVideos, { passive: true });
+    window.addEventListener("resize", checkAndPlayVisibleVideos, { passive: true });
+
+    // Initial check
+    setTimeout(checkAndPlayVisibleVideos, 250);
   }
 
   /* ============================================================================
@@ -920,13 +993,14 @@
         : `<span class="card-badge">${escapeHtml(acc.badge || "AVAILABLE")}</span>`;
 
       const hasVideo = !!acc.video;
+      const isDirectStream = hasVideo && !acc.video.includes("drive.google.com") && !acc.video.includes("youtube.com") && !acc.video.includes("youtu.be");
 
       card.innerHTML = `
         ${badgeHtml}
 
         <div class="card-media-wrapper" data-account-id="${acc.id}">
           <img src="${escapeHtml(acc.image)}" alt="${escapeHtml(acc.title)}" class="card-img-preview" loading="lazy">
-          
+          ${isDirectStream ? `<video class="card-video-preview" src="${escapeHtml(acc.video)}" muted loop playsinline webkit-playsinline preload="auto"></video>` : ""}
           ${hasVideo ? `
             <button class="btn-watch-demo" type="button" title="Watch Account Demo Video">
               <span>▶</span>
@@ -1057,6 +1131,7 @@
     renderRankPusher();
     renderIdSelling();
 
+    setupAutoplayVideos();
     setupModalTriggers();
     setupTopUpRedeemHandlers();
   }

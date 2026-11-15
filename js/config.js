@@ -24,7 +24,7 @@ const CONFIG = {
 
   // WhatsApp & Support Details
   contact: {
-    whatsappNumber: "919999999999",
+    whatsappNumber: "919876543210",
     telegramUsername: "anahouse_ff",
     workingHours: "Night Squad Rank Push & Instant Redeem Code Delivery"
   },

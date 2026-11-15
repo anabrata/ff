@@ -29,7 +29,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
     {
-      id: "panel_ff_aim_ultra",
+      id: "panel_ff_aimultra",
       title: "SAKURA RED ARTICS BUNNY",
       badge: "AURA",
       image: "https://i.postimg.cc/zBJVG5d8/Screenshot-2026-11-16-00-57-41-12-c28519d624689b8d548e2809af584b0c.jpg",

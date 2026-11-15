@@ -257,7 +257,8 @@ const PRODUCTS_CONFIG = {
   // 4. FREE FIRE ID SELLING SECTION (NO BUY BUTTON - DISPLAY ONLY)
   // Local deals - Customer contacts seller directly
   // ============================================================================
-  gamingIdProducts: [   
+  gamingIdProducts: [ 
+    
 if (typeof window !== "undefined") {
   window.PRODUCTS_CONFIG = PRODUCTS_CONFIG;
 }

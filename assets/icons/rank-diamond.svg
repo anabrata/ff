@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="diaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#bae6fd" />
+      <stop offset="30%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#082f49" />
+    </linearGradient>
+    <linearGradient id="diaGem" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f0f9ff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <filter id="glowDia" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#38bdf8" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+  <!-- Aggressive Angular Shield -->
+  <polygon points="60,3 116,28 116,92 60,117 4,92 4,28" fill="url(#diaGrad)" stroke="#7dd3fc" stroke-width="3" filter="url(#glowDia)"/>
+  <polygon points="60,14 102,36 102,84 60,106 18,36 18,36" fill="#082f49" stroke="#38bdf8" stroke-width="2"/>
+  <!-- Cyber Wing Blades -->
+  <path d="M20 36 L0 18 L8 80 Z" fill="url(#diaGem)"/>
+  <path d="M100 36 L120 18 L112 80 Z" fill="url(#diaGem)"/>
+  <!-- Faceted Diamond Core -->
+  <polygon points="60,20 88,46 60,98 32,46" fill="url(#diaGem)"/>
+  <polygon points="60,30 76,46 60,82 44,46" fill="#0c4a6e"/>
+  <!-- Diamond faceted reflections -->
+  <polygon points="60,36 72,48 60,70" fill="#e0f2fe" opacity="0.9"/>
+  <polygon points="60,36 48,48 60,70" fill="#38bdf8" opacity="0.7"/>
+  <circle cx="60" cy="53" r="4" fill="#ffffff"/>
+</svg>

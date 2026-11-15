@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="heroicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fca5a5" />
+      <stop offset="25%" stop-color="#ef4444" />
+      <stop offset="70%" stop-color="#b91c1c" />
+      <stop offset="100%" stop-color="#450a0a" />
+    </linearGradient>
+    <linearGradient id="flameGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#dc2626" />
+      <stop offset="60%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#fef08a" />
+    </linearGradient>
+    <filter id="glowHeroic" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#ef4444" flood-opacity="0.9"/>
+    </filter>
+  </defs>
+  <!-- Flame Wings Outer -->
+  <polygon points="60,2 118,26 118,94 60,118 2,94 2,26" fill="url(#heroicGrad)" stroke="#f87171" stroke-width="3" filter="url(#glowHeroic)"/>
+  <polygon points="60,12 104,34 104,86 60,108 16,86 16,34" fill="#2d0606" stroke="#ef4444" stroke-width="2"/>
+  <!-- Outer Dragon Wings -->
+  <path d="M18 34 L-2 14 L4 50 L-6 60 L10 82 Z" fill="url(#flameGrad)"/>
+  <path d="M102 34 L122 14 L116 50 L126 60 L110 82 Z" fill="url(#flameGrad)"/>
+  <!-- Center Demon Skull / Flame Crest -->
+  <polygon points="60,18 90,44 60,100 30,44" fill="url(#flameGrad)"/>
+  <polygon points="60,28 78,44 60,86 42,44" fill="#450a0a"/>
+  <!-- Horns and Core -->
+  <path d="M60 36 L66 48 L76 40 L70 58 L78 68 L60 80 L42 68 L50 58 L44 40 L54 48 Z" fill="#fee2e2"/>
+  <!-- Eyes -->
+  <polygon points="52,52 58,54 54,58" fill="#fbbf24"/>
+  <polygon points="68,52 62,54 66,58" fill="#fbbf24"/>
+  <polygon points="60,62 65,70 55,70" fill="#dc2626"/>
+</svg>

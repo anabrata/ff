@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>ANAHouse | Free Fire Store • Panels, Top-Up & Rank Push</title>
+  <meta name="description" content="ANAHouse - Dedicated Free Fire Store. Get tested sensitivity panels, official Top-Up rates, night duo rank push, and verified Free Fire IDs.">
+  <meta name="theme-color" content="#f4f6fb">
+  
+  <!-- Favicon / Chrome Tab Logo (Rounded Corners) -->
+  <link rel="icon" type="image/png" href="./assets/images/logo-rounded.png">
+  <link rel="apple-touch-icon" href="./assets/images/logo-rounded.png">
+
+  <!-- Gaming & UI Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800;900&family=Rajdhani:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glow & Matrix Grid Background -->
+  <div class="cyber-bg-grid" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+  <!-- ============================================================================
+       1. CINEMATIC HACKING GLITCHY BOOT INTRO (Fast, Shaky & Intense)
+       ============================================================================ -->
+  <aside id="cyber-boot-screen" class="cyber-boot-screen" aria-label="System Initializing">
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="glitch-slice-bar" aria-hidden="true"></div>
+    <div class="glitch-slice-bar slice-2" aria-hidden="true"></div>
+    <div class="boot-matrix-rain" id="boot-matrix-bg" aria-hidden="true"></div>
+
+    <div class="boot-content">
+      <!-- Status Badge -->
+      <div class="hacker-status-pill">
+        <span class="blinking-dot">●</span>
+        <span>SECURITY OVERRIDE IN PROGRESS</span>
+      </div>
+
+      <!-- Hacker Scrambler Glitch Title -->
+      <div class="hacker-glitch-wrap">
+        <h1 class="hacker-glitch-title" id="hacker-scramble-text" data-text="ANAHOUSE">ANAHOUSE</h1>
+      </div>
+      <div class="hacker-code-sub">// INJECTING FREE FIRE VIP PROTOCOLS_</div>
+
+      <!-- Realtime Hacker Stream Console -->
+      <div class="terminal-box" id="boot-terminal" aria-live="polite">
+        <div class="terminal-line" id="term-line-1">&gt; INITIALIZING_SOCKET_INJECTION...</div>
+        <div class="terminal-line" id="term-line-2">&gt; BYPASSING_FIREWALL [0x88F92]... OK</div>
+        <div class="terminal-line" id="term-line-3">&gt; MOUNTING_VIP_PANELS_&amp;_TOPUP_RATES...</div>
+        <div class="terminal-line active-line" id="term-line-4">&gt; SYSTEM_BREACH_VERIFIED: READY_</div>
+      </div>
+
+      <!-- Cyber Progress Bar -->
+      <div class="boot-progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="boot-progress-fill" id="boot-progress-fill"></div>
+      </div>
+
+      <button id="btn-skip-boot" class="btn-skip-boot" type="button" aria-label="Skip Loading">
+        SKIP [ESC]
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============================================================================
+       2. APP HEADER (CLEAN & MINIMAL)
+       ============================================================================ -->
+  <header class="app-header">
+    <div class="header-container">
+      
+      <!-- Brand Logo (New Rounded Logo) -->
+      <a href="#panel" class="brand-identity" id="brand-link" aria-label="ANAHouse Home">
+        <img src="./assets/images/logo-rounded.png" alt="ANAHouse Logo" class="brand-logo-img">
+        <div class="brand-text-wrap">
+          <span class="brand-title">ANA<span>HOUSE</span></span>
+          <span class="brand-subtitle">FREE FIRE STORE</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Tabs -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <button class="nav-link-btn active" data-section="panel" type="button">
+          <span>⚡ PANEL</span>
+        </button>
+        <button class="nav-link-btn" data-section="topup" type="button">
+          <span>💎 TOP UP</span>
+        </button>
+        <button class="nav-link-btn" data-section="rank" type="button">
+          <span>🏆 RANK PUSHER</span>
+        </button>
+        <button class="nav-link-btn" data-section="ids" type="button">
+          <span>🆔 ID SELLING</span>
+        </button>
+      </nav>
+
+      <!-- Theme Switcher (Light / Dark) -->
+      <div class="header-actions">
+        <button id="btn-toggle-theme" class="icon-action-btn" type="button" title="Switch Theme (Light/Dark)">
+          <span id="theme-icon">☀️</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================================
+       3. MAIN CONTENT CONTAINER (FOUR SECTIONS)
+       ============================================================================ -->
+  <main class="main-wrapper" id="main-content">
+
+    <!-- ==========================================================================
+         SECTION 1: PANEL (Exactly 2 Verified Free Fire Panels)
+         ========================================================================== -->
+    <section id="section-panel" class="section-view active-section" aria-labelledby="heading-panel">
+      <div class="section-hero">
+        <div class="section-title-wrap">
+          <div class="section-title-icon">⚡</div>
+          <h2 id="heading-panel" class="section-title">FREE FIRE VIP PANELS</h2>
+        </div>
+      </div>
+
+      <!-- Exactly 2 Panel Cards Container -->
+      <div class="product-grid" id="panel-cards-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: TOP UP (BOX FORM ONLY - DIRECT FROM CHART WITH BUY BOX)
+         ========================================================================== -->
+    <section id="section-topup" class="section-view" aria-labelledby="heading-topup">
+      <div class="section-hero">
+        <div class="section-title-wrap">
+          <div class="section-title-icon">💎</div>
+          <h2 id="heading-topup" class="section-title">FREE FIRE TOP UP</h2>
+        </div>
+      </div>
+
+      <!-- TOP UP BOX FORM GRID -->
+      <div class="topup-box-grid" id="topup-boxes-container">
+        <!-- Rendered dynamically from PRODUCTS_CONFIG.topUpBoxes -->
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: RANK PUSHER (NO BOOK BUTTON - DISPLAY ONLY & ANIMATED)
+         ========================================================================== -->
+    <section id="section-rank" class="section-view" aria-labelledby="heading-rank">
+      <div class="section-hero">
+        <div class="section-title-wrap">
+          <div class="section-title-icon">🏆</div>
+          <h2 id="heading-rank" class="section-title">FREE FIRE RANK PUSHING</h2>
+        </div>
+
+        <!-- Night Play Requirement Notice -->
+        <div class="rank-notice-box">
+          <div class="rank-notice-icon">🌙</div>
+          <div class="rank-notice-content">
+            <h4>Night Squad Push Requirement & Timeline:</h4>
+            <p>
+              • <strong>Timing:</strong> You have to play with me at night in duo or squad.<br>
+              • <strong>Duration:</strong> Takes <strong>1 to 2 days</strong> (or up to <strong>3 days</strong> depending on the rank gap).<br>
+              • Local deal — prices shown below. Contact me to start your session.
+            </p>
+          </div>
+        </div>
+
+        <!-- Visual Rank Progression Roadmap with Genuine Icons -->
+        <div class="rank-roadmap-card">
+          <div style="font-family: var(--font-tech); font-size: 0.85rem; font-weight: 800; color: var(--text-muted); margin-bottom: 12px; letter-spacing: 1px;">
+            OFFICIAL FREE FIRE RANK TIERS
+          </div>
+          <div class="rank-flow-list" id="rank-flow-list">
+            <!-- Rendered dynamically with genuine rank emblems -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Rank Cards (Price Display Only - No Book Button) -->
+      <div class="product-grid" id="rank-cards-grid">
+        <!-- Rendered dynamically from PRODUCTS_CONFIG.rankPusherServices -->
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: ID SELLING (DISPLAY ONLY - NO BUY BUTTON)
+         ========================================================================== -->
+    <section id="section-ids" class="section-view" aria-labelledby="heading-ids">
+      <div class="section-hero">
+        <div class="section-title-wrap">
+          <div class="section-title-icon">🆔</div>
+          <h2 id="heading-ids" class="section-title">FREE FIRE ID MARKETPLACE</h2>
+        </div>
+      </div>
+
+      <!-- ID Cards Grid Container (Price Display Only - No Buy Button) -->
+      <div class="product-grid" id="id-cards-grid">
+        <!-- Rendered dynamically by js/app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================================
+       4. MOBILE BOTTOM NAVIGATION BAR
+       ============================================================================ -->
+  <nav class="mobile-bottom-nav" aria-label="Mobile Navigation">
+    <button class="mobile-nav-item active" data-section="panel" type="button">
+      <span class="mobile-nav-icon">⚡</span>
+      <span class="mobile-nav-label">PANEL</span>
+    </button>
+    <button class="mobile-nav-item" data-section="topup" type="button">
+      <span class="mobile-nav-icon">💎</span>
+      <span class="mobile-nav-label">TOP UP</span>
+    </button>
+    <button class="mobile-nav-item" data-section="rank" type="button">
+      <span class="mobile-nav-icon">🏆</span>
+      <span class="mobile-nav-label">RANK</span>
+    </button>
+    <button class="mobile-nav-item" data-section="ids" type="button">
+      <span class="mobile-nav-icon">🆔</span>
+      <span class="mobile-nav-label">IDS</span>
+    </button>
+  </nav>
+
+  <!-- ============================================================================
+       5. HIGH-END VIDEO DEMO MODAL (WITH BEAUTIFUL FLOATING CLOSE BUTTON)
+       ============================================================================ -->
+  <div id="modal-video-player" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container video-modal-container">
+      
+      <!-- Video Modal Header with floating cross and badge -->
+      <div class="video-modal-topbar">
+        <div class="video-title-wrap">
+          <span class="live-rec-dot"></span>
+          <span class="video-modal-title-text" id="video-modal-title">Product Demo Preview</span>
+        </div>
+        
+        <!-- Beautiful Floating Cross (Close) Button -->
+        <button class="video-floating-close-btn" id="btn-close-video-modal" type="button" aria-label="Close Video Preview">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- 16:9 Video Canvas -->
+      <div class="video-frame-box" id="video-player-container">
+        <!-- Clean video element injected dynamically -->
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ============================================================================
+       6. TOP-UP 5-DIGIT PIN REDEEM CODE CLAIM MODAL (GOOGLE SHEETS INTEGRATION)
+       ============================================================================ -->
+  <div id="modal-topup-redeem" class="modal-overlay" role="dialog" aria-modal="true">
+    <div class="modal-container redeem-modal-container">
+      
+      <!-- Modal Topbar -->
+      <div class="redeem-modal-topbar">
+        <div class="redeem-title-wrap">
+          <span class="redeem-topbar-dot">●</span>
+          <span class="redeem-topbar-title">LOCAL REDEEM DISPENSER</span>
+        </div>
+        <button class="video-floating-close-btn" id="btn-close-redeem-modal" type="button" aria-label="Close Redeem Window">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="redeem-modal-body">
+        
+        <!-- Selected Box Info Badge -->
+        <div class="redeem-box-info-pill">
+          <span class="box-pill-icon">💎</span>
+          <span id="redeem-box-label">SELECTED: BOX 1 (₹10 – ₹50)</span>
+        </div>
+
+        <!-- 1. PIN INPUT VIEW -->
+        <div id="redeem-view-input" class="redeem-view-block">
+          <h3 class="redeem-view-heading">ENTER 5-DIGIT PASSCODE</h3>
+          <p class="redeem-view-sub">Enter the 5-digit number given by the seller after paying locally.</p>
+
+          <!-- 5 Futuristic Digit Boxes -->
+          <div class="pin-digit-group" id="pin-digit-group" aria-label="5-digit passcode">
+            <input type="text" maxlength="1" class="pin-digit-input" data-index="0" inputmode="numeric" pattern="[0-9]*" autocomplete="off" autofocus aria-label="Digit 1">
+            <input type="text" maxlength="1" class="pin-digit-input" data-index="1" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Digit 2">
+            <input type="text" maxlength="1" class="pin-digit-input" data-index="2" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Digit 3">
+            <input type="text" maxlength="1" class="pin-digit-input" data-index="3" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Digit 4">
+            <input type="text" maxlength="1" class="pin-digit-input" data-index="4" inputmode="numeric" pattern="[0-9]*" autocomplete="off" aria-label="Digit 5">
+          </div>
+
+          <!-- Quick Action Buttons -->
+          <div class="pin-action-row">
+            <button type="button" class="btn-pin-util" id="btn-paste-pin" title="Paste 5 Digits from Clipboard">
+              <span>📋 PASTE PIN</span>
+            </button>
+            <button type="button" class="btn-pin-util" id="btn-clear-pin" title="Clear PIN">
+              <span>✕ CLEAR</span>
+            </button>
+          </div>
+
+          <!-- Error Message Banner -->
+          <div class="redeem-error-banner" id="redeem-error-banner" style="display: none;"></div>
+
+          <!-- Submit / Unlock Button -->
+          <button type="button" class="btn-unlock-code btn-shining-sweep" id="btn-submit-unlock">
+            <span>⚡ UNLOCK REDEEM CODE</span>
+          </button>
+        </div>
+
+        <!-- 2. SCANNING & VERIFYING VIEW -->
+        <div id="redeem-view-loading" class="redeem-view-block" style="display: none;">
+          <div class="cyber-radar-scan">
+            <div class="radar-circle"></div>
+            <div class="radar-beam"></div>
+            <span class="radar-icon">🔐</span>
+          </div>
+          <div class="loading-terminal-text" id="loading-terminal-text">CONNECTING TO SECURE SERVER...</div>
+          <div class="loading-matrix-sub">// DECRYPTING MATCHING VOUCHER_</div>
+        </div>
+
+        <!-- 3. SUCCESS / REVEALED VOUCHER VIEW -->
+        <div id="redeem-view-success" class="redeem-view-block" style="display: none;">
+          <div class="hologram-voucher-card">
+            <div class="voucher-top-tag">
+              <span class="voucher-auth-badge">✓ AUTHENTICATED</span>
+              <span class="voucher-box-badge" id="revealed-box-tag">BOX 2</span>
+            </div>
+
+            <div class="voucher-icon-center">🎁</div>
+            <h4 class="voucher-title">FREE FIRE REDEEM CODE</h4>
+
+            <!-- Holographic Code Box with Digital Glow -->
+            <div class="revealed-code-wrap">
+              <div class="revealed-code-display" id="revealed-code-display">XXXX-XXXX-XXXX</div>
+              <button type="button" class="btn-copy-code" id="btn-copy-code" title="Copy Redeem Code">
+                <span id="copy-btn-text">📋 COPY</span>
+              </button>
+            </div>
+
+            <p class="voucher-hint-text">
+              Code verified! Copy and redeem directly on Google Play Store or Free Fire official redemption site.
+            </p>
+
+            <button type="button" class="btn-voucher-finish" id="btn-voucher-finish">
+              <span>✓ CLOSE WINDOW</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================================
+       6. TOAST CONTAINER & FOOTER
+       ============================================================================ -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <footer class="app-footer">
+    <div class="footer-inner">
+      <div class="brand-title" style="font-size: 1.1rem;">ANA<span>HOUSE</span></div>
+      <p class="footer-text">Dedicated Free Fire Store • Tested Panels, Top-Up & Night Squad Push. Local Deals & Direct Contact.</p>
+    </div>
+  </footer>
+
+  <!-- Centralized Script Inclusion -->
+  <script src="./js/config.js"></script>
+  <script src="./js/pricing.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/app.js"></script>
+
+</body>
+</html>

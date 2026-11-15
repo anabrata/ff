@@ -12,38 +12,56 @@ const PRODUCTS_CONFIG = {
   panelProducts: [
     {
       id: "panel_ff_aim_ultra",
-      title: "ANAHouse VIP Headshot & Sensitivity Panel",
-      badge: "PRO TESTED",
-      image: "https://i.postimg.cc/sDDLQ9VC/icon-512.png",
-      video: "https://drive.google.com/file/d/1QOPeihPIY898YsMvugYuapzGIK8xJ7Sy/view?usp=sharing",
+      title: "100% Headshot & Location",
+      badge: "ONLY RED",
+      image: "https://i.postimg.cc/3R57DgH7/1.jpg",
+      video: "https://drive.google.com/file/d/1MMN7KevBdcaHuF9cPyqQSBWCO6bC-kpT/view?usp=sharing",
       description: "Custom touch sensitivity booster and drag-shot calibration tool. Works smoothly on all Android phones without lag or heat.",
       features: [
-        "Dynamic Touch Sensitivity 4.0",
-        "Smooth One-Tap Drag Calibration",
-        "No Root Required (Android 9 to 15)",
-        "Direct Setup Guide on WhatsApp"
+        "100% Headshot & Location",
+        "Body Head",
+        "MOST Dangerous",
+       
       ],
-      price: 199,
-      originalPrice: 350,
-      duration: "Lifetime Setup",
+      price:60,
+      originalPrice: 100,
+      duration: "RED",
       available: true
     },
     {
       id: "panel_ff_fps_smooth",
-      title: "Free Fire 90/120 FPS High Refresh Optimizer",
-      badge: "NO LAG",
-      image: "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80",
-      video: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+      title: "Loction (90%)",
+      badge: "HACKER..",
+      image: "https://i.postimg.cc/Y967Nhpp/2.jpg",
+      video: "https://drive.google.com/file/d/18VHr1T5lxQwlNIrElzVBS7duzPM7n_v8/view?usp=sharing",
       description: "Stabilizes frame rates and eliminates stutter during close combat scrims and clash squad matches.",
       features: [
-        "Unlocks Ultra FPS Mode",
+        "Get HP of Enemy",
         "Thermal Stutter Fix for Android",
         "RAM Buffer Clean for Low-End Phones",
         "Simple One-Click Activation"
       ],
-      price: 149,
-      originalPrice: 250,
-      duration: "Permanent Key",
+      price: 20,
+      originalPrice: 50,
+      duration: "HP and Location",
+      available: true
+    },
+    {
+      id: "panel_ff_fps_smooth",
+      title: "Location",
+      badge: "SIMPLE",
+      image: "https://i.postimg.cc/zBCNwVJ5/3.jpg",
+      video: "https://drive.google.com/file/d/1Z0LdYwNP-jX3vEaCrFXGDYeNrEZ02K1S/view?usp=sharing",
+      description: "Stabilizes frame rates and eliminates stutter during close combat scrims and clash squad matches.",
+      features: [
+        "Location + Invisible Gloowall",
+        "Low risk of ID BAN!",
+        "RAM Buffer Clean for Low-End Phones",
+        "Simple One-Click Activation"
+      ],
+      price:40,
+      originalPrice: 80,
+      duration: "SAFE",
       available: true
     }
   ],

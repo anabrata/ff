@@ -227,11 +227,30 @@
       `;
     } else {
       container.innerHTML = `
-        <video src="${cleanUrl}" controls autoplay playsinline controlsList="nodownload"></video>
+        <video src="${cleanUrl}" controls autoplay playsinline webkit-playsinline controlsList="nodownload"></video>
       `;
     }
 
     openModal(modal);
+
+    // Mobile Direct Fullscreen: Trigger native fullscreen on mobile for pure zero-UI playback
+    const isMobile = window.innerWidth <= 768 || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    if (isMobile) {
+      const videoEl = container.querySelector("video");
+      if (videoEl) {
+        if (videoEl.requestFullscreen) {
+          videoEl.requestFullscreen().catch(() => {});
+        } else if (videoEl.webkitEnterFullscreen) {
+          videoEl.webkitEnterFullscreen();
+        }
+      } else {
+        if (modal.requestFullscreen) {
+          modal.requestFullscreen().catch(() => {});
+        } else if (modal.webkitRequestFullscreen) {
+          modal.webkitRequestFullscreen().catch(() => {});
+        }
+      }
+    }
   }
 
   /* ============================================================================
@@ -1081,6 +1100,16 @@
     if (!modalEl) return;
     modalEl.classList.remove("open");
     document.body.style.overflow = "";
+
+    // Exit browser fullscreen if active
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+      if (document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+      } else if (document.webkitExitFullscreen) {
+        document.webkitExitFullscreen();
+      }
+    }
+
     const videoContainer = modalEl.querySelector("#video-player-container");
     if (videoContainer) videoContainer.innerHTML = "";
   }
@@ -1092,6 +1121,20 @@
         closeModal(document.getElementById("modal-video-player"));
       });
     }
+
+    // Hardware back button / fullscreen exit listener on mobile
+    document.addEventListener("fullscreenchange", () => {
+      const modal = document.getElementById("modal-video-player");
+      if (modal && modal.classList.contains("open") && !document.fullscreenElement) {
+        closeModal(modal);
+      }
+    });
+    document.addEventListener("webkitfullscreenchange", () => {
+      const modal = document.getElementById("modal-video-player");
+      if (modal && modal.classList.contains("open") && !document.webkitFullscreenElement) {
+        closeModal(modal);
+      }
+    });
 
     document.querySelectorAll(".btn-close-modal").forEach((btn) => {
       btn.addEventListener("click", () => {

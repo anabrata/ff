@@ -33,7 +33,7 @@ const PRODUCTS_CONFIG = {
       title: "GREEN ARTIC AND SAKURA",
       badge: "AURA",
       image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
-      video: "",
+      video: "https://drive.google.com/file/d/1HCTO2uSHNdTvaSlcr1YxHlJeFgXgLxGM/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
         "GREEN ARTIC AND SAKURA",
@@ -51,7 +51,7 @@ const PRODUCTS_CONFIG = {
       title: "BLUE ARTIC FEMAIL + GUN",
       badge: "AURA",
       image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
-      video: "",
+      video: "https://drive.google.com/file/d/1rpdBJAORM49sLBvTnX6EAD8-WZnTne6L/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
         "BLUE ARTIC FEMAIL + GUN",
@@ -69,7 +69,7 @@ const PRODUCTS_CONFIG = {
       title: "PINK FIST + BLUE ARTIC",
       badge: "AURA",
       image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
-      video: "",
+      video: "https://drive.google.com/file/d/1BsxZ1q3aYXN7mzgFbUhIQUc1QddtXGWt/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
         "PINK FIST + BLUE ARTIC",

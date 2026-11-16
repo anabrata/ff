@@ -23,8 +23,62 @@ const PRODUCTS_CONFIG = {
         "MOST Dangerous",
         "Supports all Matches"
       ],
-      price: 80,
+      price: 70,
       originalPrice: 100,
+      duration: "RED",
+      available: true
+    },
+        {
+      id: "panel_ff_aim_ultra",
+      title: "GREEN ARTIC AND SAKURA",
+      badge: "AURA",
+      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      video: "",
+      description: "[Play without any lag or id ban issue(in OB 55).",
+      features: [
+        "GREEN ARTIC AND SAKURA",
+        "Play directelly",
+        "MOST Dangerous",
+        "Supports all Matches"
+      ],
+      price: 50,
+      originalPrice: 80,
+      duration: "RED",
+      available: true
+    },
+        {
+      id: "panel_ff_aim_ultra",
+      title: "BLUE ARTIC FEMAIL + GUN",
+      badge: "AURA",
+      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      video: "",
+      description: "[Play without any lag or id ban issue(in OB 55).",
+      features: [
+        "BLUE ARTIC FEMAIL + GUN",
+        "Play directelly",
+        "MOST Dangerous",
+        "Supports all Matches"
+      ],
+      price: 50,
+      originalPrice: 80,
+      duration: "RED",
+      available: true
+    },
+        {
+      id: "panel_ff_aim_ultra",
+      title: "PINK FIST + BLUE ARTIC",
+      badge: "AURA",
+      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      video: "",
+      description: "[Play without any lag or id ban issue(in OB 55).",
+      features: [
+        "PINK FIST + BLUE ARTIC",
+        "Play directelly",
+        "MOST Dangerous",
+        "Supports all Matches"
+      ],
+      price: 60,
+      originalPrice: 90,
       duration: "RED",
       available: true
     },
@@ -90,10 +144,10 @@ const PRODUCTS_CONFIG = {
   // ============================================================================
   topUpBoxes: [
     {
-      id: "topup_10_49",
+      id: "topup_09_49",
       boxNumber: 1,
       name: "BOX 1",
-      range: "₹10 – ₹49",
+      range: "₹09 – ₹49",
       extraCharge: 10,
       popular: false,
       tag: "AIRDROP PACK"

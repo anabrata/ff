@@ -11,7 +11,7 @@ const PRODUCTS_CONFIG = {
   // ============================================================================
   panelProducts: [
     {
-      id: "panel_ff_aim_ultra",
+      id: "panel_ff_aim_ultra01",
       title: "GOLDEN HIPHOP AND HIPHOP",
       badge: "AURA",
       image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
@@ -29,7 +29,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
         {
-      id: "panel_ff_aim_ultra",
+      id: "panel_ff_aim_ultra02",
       title: "GREEN ARTIC AND SAKURA",
       badge: "AURA",
       image: "https://i.postimg.cc/y6X3LmBn/Screenshot-2026-11-16-11-13-23-43-c28519d624689b8d548e2809af584b0c.jpg",
@@ -47,7 +47,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
         {
-      id: "panel_ff_aim_ultra",
+      id: "panel_ff_aim_ultra03",
       title: "BLUE ARTIC FEMAIL + GUN",
       badge: "AURA",
       image: "https://i.postimg.cc/SK2zdHNh/Screenshot-2026-11-16-11-14-15-60-c28519d624689b8d548e2809af584b0c.jpg",
@@ -65,7 +65,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
         {
-      id: "panel_ff_aim_ultra",
+      id: "panel_ff_aim_ultra04",
       title: "PINK FIST + BLUE ARTIC",
       badge: "AURA",
       image: "https://i.postimg.cc/9XGZv3Pb/Screenshot-2026-11-16-11-11-35-54-c28519d624689b8d548e2809af584b0c.jpg",
@@ -83,7 +83,7 @@ const PRODUCTS_CONFIG = {
       available: true
     },
     {
-      id: "panel_ff_aimultra",
+      id: "panel_ff_aim_ultra05",
       title: "SAKURA RED ARTICS BUNNY",
       badge: "AURA",
       image: "https://i.postimg.cc/zBJVG5d8/Screenshot-2026-11-16-00-57-41-12-c28519d624689b8d548e2809af584b0c.jpg",

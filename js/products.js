@@ -32,7 +32,7 @@ const PRODUCTS_CONFIG = {
       id: "panel_ff_aim_ultra",
       title: "GREEN ARTIC AND SAKURA",
       badge: "AURA",
-      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      image: "https://i.postimg.cc/y6X3LmBn/Screenshot-2026-11-16-11-13-23-43-c28519d624689b8d548e2809af584b0c.jpg",
       video: "https://drive.google.com/file/d/1HCTO2uSHNdTvaSlcr1YxHlJeFgXgLxGM/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
@@ -50,7 +50,7 @@ const PRODUCTS_CONFIG = {
       id: "panel_ff_aim_ultra",
       title: "BLUE ARTIC FEMAIL + GUN",
       badge: "AURA",
-      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      image: "https://i.postimg.cc/SK2zdHNh/Screenshot-2026-11-16-11-14-15-60-c28519d624689b8d548e2809af584b0c.jpg",
       video: "https://drive.google.com/file/d/1rpdBJAORM49sLBvTnX6EAD8-WZnTne6L/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
@@ -68,7 +68,7 @@ const PRODUCTS_CONFIG = {
       id: "panel_ff_aim_ultra",
       title: "PINK FIST + BLUE ARTIC",
       badge: "AURA",
-      image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
+      image: "https://i.postimg.cc/9XGZv3Pb/Screenshot-2026-11-16-11-11-35-54-c28519d624689b8d548e2809af584b0c.jpg",
       video: "https://drive.google.com/file/d/1BsxZ1q3aYXN7mzgFbUhIQUc1QddtXGWt/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [

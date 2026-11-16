@@ -15,7 +15,7 @@ const PRODUCTS_CONFIG = {
       title: "GOLDEN HIPHOP AND HIPHOP",
       badge: "AURA",
       image: "https://i.postimg.cc/ydhX2f2L/IMG-20261116-000613.jpg",
-      video: "https://drive.google.com/file/d/1P3hPIpCOijTiDvJFpe9in_hK_jLYRO--/view?usp=sharing",
+      video: "https://drive.google.com/file/d/1P3hPIpCOijTiDvJFpe9in_hK_jLYRO--/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
         "GOLDEN HIPHOP & HIPHOP",

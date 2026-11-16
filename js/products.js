@@ -66,13 +66,13 @@ const PRODUCTS_CONFIG = {
     },
         {
       id: "panel_ff_aim_ultra04",
-      title: "PINK FIST + BLUE ARTIC",
+      title: "ELECTRIC FIST + BLUE ARTIC",
       badge: "AURA",
       image: "https://i.postimg.cc/9XGZv3Pb/Screenshot-2026-11-16-11-11-35-54-c28519d624689b8d548e2809af584b0c.jpg",
-      video: "https://drive.google.com/file/d/1BsxZ1q3aYXN7mzgFbUhIQUc1QddtXGWt/view?usp=drivesdk",
+      video: "https://drive.google.com/file/d/16FMVZp3bQs1weYRBRUi-T75f_mLotxKg/view?usp=drivesdk",
       description: "[Play without any lag or id ban issue(in OB 55).",
       features: [
-        "PINK FIST + BLUE ARTIC",
+        "ELECTRIC FIST + BLUE ARTIC",
         "Play directelly",
         "MOST Dangerous",
         "Supports all Matches"
